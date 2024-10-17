@@ -8,7 +8,7 @@ const Button = ({ label, iconURL, iconAlt, className, fullWidth }) => {
           ? `border-slate-gray border-2 py-3.5 bg-white-400  text-slate-gray `
           : `bg-gradient-to-r from-pink-500 to-purple-500 bg-purple-500 text-white`
       }   rounded-full flex justify-center py-4 gap-2 items-center px-6 text-xl ${
-        fullWidth && "w-full"
+        fullWidth ? `w-full` : " "
       } `}
     >
       {label}{" "}
