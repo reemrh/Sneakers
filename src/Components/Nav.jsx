@@ -6,7 +6,7 @@ import { navLinks } from "../constants";
 const Nav = () => {
   return (
     <header className="absolute w-full z-10 ">
-      <nav className="flex px-16  py-8 justify-between items-center">
+      <nav className="flex px-8  py-8 justify-between items-center">
         <div className=" flex items-end mb-4">
           <img src={Logo} className=" w-12 h-12" />
           <p className="text-2xl text-fuchsia-600 bg-gradient-to-r from-pink-500 via purple-300 to-purple-500 text-transparent bg-clip-text">

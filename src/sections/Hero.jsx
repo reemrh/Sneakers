@@ -12,30 +12,32 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container"
+      className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 "
     >
-      <div className="relative z-15 left-10 xl:w-2/5 flex flex-col justify-center items-start w-full  max-xl:padding-x pt-28">
-        <p className="text-purple-500 font-montserrat text-2xl leading-2 mb-[-20px] mt-2">
+      <div className="relative z-15  xl:w-2/5 flex flex-col justify-center items-start w-full  max-xl:padding-x pt-28">
+        <p className="text-purple-500 font-montserrat text-2xl leading-2 mb-[20px] max-sm:mb-[0px] mt-2 ">
           Our new Collection
         </p>
-        <h1 className="mt-6 mb-4 z-15 font-palanquin text-8xl max-sm:text-[40px] bg-white  font-bold ">
-          <span className="bg-white-500 b">The New Arrival</span>
+        <h1 className="  max-sm:leading-[70px] max-sm:mt-[-4px] max-sm:bg-transparent mt-6 mb-4 z-15 text-[90px] leading-[100px] font-palanquin max-sm:text-[40px] max-sm:leading-16 bg-white  font-bold ">
+          <span className="bg-white-500">The New Arrival</span>
           <br />
-          <span className=" bg-gradient-to-r from-pink-500 to-purple-500 bg-purple-500 text-transparent bg-clip-text">
+          <span className=" mt-20px bg-gradient-to-r from-pink-500 to-purple-500 bg-purple-500 text-transparent bg-clip-text">
             SNEAKERS
           </span>
         </h1>
-        <p className="font-montserrat text-slate-gray text-lg leading-8 mt-6 mb-14 sm:max-w-sm">
+        <p className="font-montserrat text-slate-gray text-lg leading-8 max-sm:mt-2  max-sm:mb-8 mt-6 mb-14 sm:max-w-sm">
           Discover stylish Nike arrivals, quality comfort, and innovation for
           your active life.
         </p>
 
         <Button label="Shop now" iconURL={arrowRight} iconAlt="arrow" />
 
-        <div className="flex justify-start items-start flex-wrap w-full mt-20 gap-16">
+        <div className=" flex justify-start items-start  w-full mt-20 gap-12">
           {statistics.map((stat, index) => (
             <div key={index}>
-              <p className="text-4xl font-palanquin font-bold">{stat.value}</p>
+              <p className=" max-sm:text-lg  text-4xl font-palanquin font-bold">
+                {stat.value}
+              </p>
               <p className="leading-7 font-montserrat text-slate-gray">
                 {stat.label}
               </p>
@@ -45,7 +47,7 @@ const Hero = () => {
       </div>
 
       <div
-        className={`bg-purple-100 relative flex-1 flex justify-center items-center  xl:min-h-screen max-xl:py-40  bg-cover bg-center`}
+        className={` relative flex-1 flex justify-center items-center  xl:min-h-screen max-xl:py-40  bg-cover bg-center`}
       >
         <img
           src={bigShoeImg}

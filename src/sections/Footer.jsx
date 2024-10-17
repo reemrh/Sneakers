@@ -4,7 +4,7 @@ import { footerLinks, socialMedia } from "../constants";
 const Footer = () => {
   return (
     <footer className="max-container">
-      <di className=" text-white-500 flex justify-between items-start gap-20 flex-wrap max-lg:flex-col">
+      <div className=" text-white-500 flex justify-between items-start gap-20 flex-wrap max-lg:flex-col">
         <div className="flex flex-col items-start">
           <div className="flex items-end gap-1">
             <img src={logo} alt="logo" width={65} height={65} />
@@ -22,7 +22,10 @@ const Footer = () => {
           </p>
           <div className="flex mt-8 items-center gap-5">
             {socialMedia.map((item) => (
-              <div className="flex justify-center items-center h-12 w-12 rounded-full bg-gradient-to-r from-purple-300 to-white">
+              <div
+                key={item.src}
+                className="flex justify-center items-center h-12 w-12 rounded-full bg-gradient-to-r from-purple-300 to-white"
+              >
                 {" "}
                 <img
                   src={item.src}
@@ -37,7 +40,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-1 justify-between lg:gap-10 gap-20 flex-wrap text-white">
           {footerLinks.map((section) => (
-            <div key={section}>
+            <div key={section.title}>
               <h4 className="font-bold font-montserrat text-2xl leading-normal mb-6">
                 {section.title}
               </h4>
@@ -54,7 +57,7 @@ const Footer = () => {
             </div>
           ))}
         </div>
-      </di>
+      </div>
       <div className="flex justify-between text-white-400 mt-24 max-sm:flex-col max-sm:items-center">
         <div className="text-2xl flex flex-1 font-montserrat cursor-pointer justify-start items-center gap-2">
           <img
